@@ -16,6 +16,7 @@
       <div class="panel-header">
         <h2>Sets</h2>
       </div>
+      <div id="overall-progress" class="overall-progress"></div>
       <div id="sets-list"></div>
     </section>
 
@@ -23,9 +24,15 @@
       <div class="panel-header">
         <h2 id="cards-title">Cards</h2>
         <span id="cards-progress" class="progress-label"></span>
-        <button id="back-btn" class="btn btn-secondary">Back</button>
       </div>
-      <ul id="cards-list"></ul>
+      <button id="back-btn" class="hidden"></button>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="collected">Collected</button>
+        <button class="filter-btn" data-filter="missing">Missing</button>
+      </div>
+      <div id="cards-list" class="cards-grid"></div>
+      <button id="back-btn-float" class="btn btn-float">Back to Sets</button>
     </section>
   </main>
 
