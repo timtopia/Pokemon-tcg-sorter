@@ -1,0 +1,14 @@
+{
+  "name": "pokemon-tcg-sorter",
+  "version": "1.0.0",
+  "description": "A web app to organize your Pokemon TCG card collection by set",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "express": "^4.21.0"
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon TCG Sorter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pokemon TCG Sorter</h1>
+  </header>
+
+  <main>
+    <section id="sets-panel">
+      <div class="panel-header">
+        <h2>Sets</h2>
+        <button id="add-set-btn" class="btn btn-primary">+ Add Set</button>
+      </div>
+
+      <form id="add-set-form" class="form hidden">
+        <input type="text" id="set-name" placeholder="Set name (e.g. Surging Sparks)" required>
+        <input type="text" id="set-code" placeholder="Set code (e.g. SSP)">
+        <input type="date" id="set-date" placeholder="Release date">
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-secondary" id="cancel-set">Cancel</button>
+        </div>
+      </form>
+
+      <ul id="sets-list"></ul>
+    </section>
+
+    <section id="cards-panel" class="hidden">
+      <div class="panel-header">
+        <h2 id="cards-title">Cards</h2>
+        <button id="add-card-btn" class="btn btn-primary">+ Add Card</button>
+        <button id="back-btn" class="btn btn-secondary">Back</button>
+      </div>
+
+      <form id="add-card-form" class="form hidden">
+        <input type="text" id="card-name" placeholder="Card name (e.g. Pikachu ex)" required>
+        <input type="text" id="card-number" placeholder="Card number (e.g. 057/191)">
+        <select id="card-rarity">
+          <option value="">-- Rarity --</option>
+          <option value="Common">Common</option>
+          <option value="Uncommon">Uncommon</option>
+          <option value="Rare">Rare</option>
+          <option value="Double Rare">Double Rare</option>
+          <option value="Ultra Rare">Ultra Rare</option>
+          <option value="Illustration Rare">Illustration Rare</option>
+          <option value="Special Illustration Rare">Special Illustration Rare</option>
+          <option value="Hyper Rare">Hyper Rare</option>
+        </select>
+        <input type="number" id="card-quantity" placeholder="Quantity" value="1" min="1">
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-secondary" id="cancel-card">Cancel</button>
+        </div>
+      </form>
+
+      <ul id="cards-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
