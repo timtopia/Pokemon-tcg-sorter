@@ -2,13 +2,23 @@
   "name": "pokemon-tcg-sorter",
   "version": "1.0.0",
   "description": "A web app to organize your Pokemon TCG card collection by set",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "build": "tsc",
+    "start": "tsc && node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "seed": "tsx src/seed.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.0.0",
     "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
   }
 }
